@@ -1,0 +1,5 @@
+/demo/backend/.venv
+/demo/backend/.env
+/demo/backend/data/*
+node_modules
+__pycache__
