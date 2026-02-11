@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #475569 transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #475569;
+    border-radius: 3px;
+  }
+}
+
+/* Pulse animation for loading states */
+@keyframes ops-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.ops-pulse {
+  animation: ops-pulse 1.5s ease-in-out infinite;
+}
+
+/* Typing indicator */
+.typing-dot {
+  animation: ops-pulse 1.4s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* Markdown prose styling */
+.prose-ops pre {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.8rem;
+}
+.prose-ops code {
+  color: #38bdf8;
+  font-size: 0.85em;
+}
+.prose-ops pre code {
+  color: #e2e8f0;
+}
+.prose-ops ul, .prose-ops ol {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+.prose-ops li {
+  margin: 0.15rem 0;
+}
+.prose-ops p {
+  margin: 0.4rem 0;
+}
+.prose-ops h1, .prose-ops h2, .prose-ops h3 {
+  color: #f1f5f9;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+.prose-ops table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+.prose-ops th, .prose-ops td {
+  border: 1px solid #334155;
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+}
+.prose-ops th {
+  background: #1e293b;
+}
